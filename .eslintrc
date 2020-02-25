@@ -7,12 +7,13 @@
     "env": {
       "es6": true,
       "browser": true,
-      "jquery": true
+      "jquery": true,
+      "node": true // <-- new line
     },
     "rules": {
-        "semi": 1,
-        "indent": ["warn", 2],
-        "no-console": "warn",
+      "semi": 1,
+      "indent": ["warn", 2],
+      "no-console": "warn",
       "no-debugger": "warn"
     }
 }

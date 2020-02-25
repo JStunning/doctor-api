@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  margin: 5% 10%;
+  background-color: darkslateblue;
+}
+
+img {
+  height: auto;
+  width: 300px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.container {
+  background-color: lightsteelblue;
+}
