@@ -89,7 +89,7 @@ $(document).ready(function() {
       }
     }
     let uid = medicalIssue.join("");
-    newDoctor.setMedicalIssueUrl();
+    newDoctor.setMedicalIssueUrl(uid);
     let response = await newDoctor.fetchData();
     for(let i = 0; i < response.data.length; i++) {
       //console.log(response.data[i].name);

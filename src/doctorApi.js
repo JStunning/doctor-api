@@ -9,8 +9,8 @@ export class DoctorApi {
     console.log(this.url);
   }
 
-  setMedicalIssueUrl(){
-    this.url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${process.env.API_KEY}`;
+  setMedicalIssueUrl(query){
+    this.url = `https://api.betterdoctor.com/2016-03-01/doctors?query=${query}user_key=${process.env.API_KEY}`;
     console.log(this.url);
     console.log(this.fetchData(this.url))
   }
