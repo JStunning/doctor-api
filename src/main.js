@@ -89,15 +89,24 @@ $(document).ready(function() {
       }
     }
     let uid = medicalIssue.join("");
+    console.log(uid);
     newDoctor.setMedicalIssueUrl(uid);
     let response = await newDoctor.fetchData();
+    console.log(response.data,"data")
+    let doctorObjects = [];
     for(let i = 0; i < response.data.length; i++) {
-      //console.log(response.data[i].name);
-      if(response.data[i].uid === uid) {
-        $("#result").empty();
-        $("#result").append(`<h3>${response.data[i].uid}</h3>`)
-      }
+      doctorObjects.push(
+        {
+          "first": response.data[i].profile.first_name,
+          "last": response.data[i].profile.last_name,
+          "title": response.data[i].profile.title
+        }
+      );
     }
+    $("#result").empty();
+    doctorObjects.forEach(doctor => {
+      $("#result").append(`<h3>${doctor.first} ${doctor.last}, ${doctor.title}.</h3><img src="${randomDoctorImg()}">`)
+    });
   });
 
 });
